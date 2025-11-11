@@ -12,7 +12,7 @@ class DefaultGateway(kaggle_evaluation.core.templates.Gateway):
     def __init__(self, data_paths: tuple[str] | None = None):
         super().__init__(data_paths, file_share_dir=None)
         self.data_paths = data_paths
-        self.row_id_column_name = 'batch_id'
+        self.row_id_column_name = 'date_id'  # Changed from 'batch_id' to 'date_id' to match data
         self.target_column_name = 'prediction'
         self.set_response_timeout_seconds(60 * 5)
 
